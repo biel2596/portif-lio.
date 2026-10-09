@@ -1,0 +1,367 @@
+
+:root {
+  --bg-color: #000000;
+  --card-bg: #050505;
+  --text-color: #ffffff;
+  --primary-color: #A6FF00;
+  --border-color: #333333;
+}
+
+body.dark-mode {
+  --bg-color: #f4f4f4;
+  --card-bg: #ffffff;
+  --text-color: #111111;
+  --primary-color: #2b7a0b;
+  --border-color: #cccccc;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.grid {
+    display: grid;
+    grid-template-rows: 65vh 90vh 80vh 130vh 90vh;
+}
+.menu {
+    background-color: #0A0B0A;
+    color: azure;
+    border-bottom: 1px solid #8E8E8E;
+    position: fixed;
+    top: 0;          
+    left: 0;         
+    width: 100%;     
+    z-index: 1000;   
+}
+
+.menu > ul {
+   width: 100%;
+   height: 70px;
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+   padding-right: 50px;
+   gap: 25px;
+   list-style: none;
+}
+
+#menu {
+    margin-right: auto;
+    padding-left: 50px;
+}
+
+.botao-dark-mode {
+    background-color: transparent;
+    color: #A6FF00;
+    border: 1px solid #A6FF00;
+    padding: 8px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Lexend Mega', sans-serif;
+    font-size: 11px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.botao-dark-mode:hover {
+    background-color: #A6FF00;
+    color: #000000;
+}
+
+.inicio {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding-top: 70px; /* Compensa o menu fixo */
+}
+
+.gabriel {
+    color: var(--primary-color);
+    font-size: 100px;
+    font-family: "PT Sans", sans-serif;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 90px;
+    padding-right: 270px;
+}
+
+.savassi {
+    font-size: 100px;
+    font-family: "Lexend Mega", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.estrela {
+    position: absolute;
+    left: 57.5%;
+    top: 33%;
+    width: 300px;
+}
+
+.botaoprojeto {
+    width: 120px;
+    height: 50px;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.botaocontato {
+    width: 120px;
+    height: 50px;
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.local {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding-top: 60px;
+}
+
+.sobre-mim {
+    background-color: var(--bg-color);
+}
+
+.sobre {
+    color: var(--primary-color);
+    padding-left: 150px;
+    height: 90px;
+    font-size: 30px;
+    font-family: 'Lexend Mega', sans-serif;
+    margin-bottom: 40px;
+}
+
+.imagemminha {
+    width: 30%;
+    height: 60%;
+    padding-left: 10%;
+}
+
+h2 {
+    color: var(--primary-color);
+    width: 1000px;
+    padding: 100px;
+}
+
+.sla {
+    display: flex;
+    align-items: center;
+}
+
+.linha {
+    border: none;
+    border-top: 1px solid var(--border-color); 
+    margin: 160px auto;         
+    width: 80%;                 
+}
+
+.habilidades {
+  background-color: var(--bg-color);
+  width: 100%;
+  padding: 60px 10%;
+  box-sizing: border-box;
+}
+
+.grid-habilidades {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card-habilidade {
+  border: 1px solid var(--border-color);
+  background-color: var(--card-bg);
+  height: 180px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+.card-habilidade:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-5px);
+}
+
+.conteudo-hab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.icone-hab {
+  width: 100px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.valor-hab {
+  color: var(--text-color);
+  font-family: 'Lexend Mega', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.projetos {
+  background-color: var(--bg-color);
+  width: 100%;
+  padding: 60px 10%;
+  box-sizing: border-box;
+}
+
+.escritaP {
+  color: var(--primary-color);
+  font-family: 'Lexend Mega', sans-serif;
+  font-size: 30px;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.espaco {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.Projeto {
+  border: 1px solid var(--border-color);
+  background-color: var(--card-bg);
+  height: 380px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+.Projeto:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-5px);
+}
+
+.projetos .linha {
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: 80px auto 0 auto;
+  width: 100%;
+}
+
+.contato {
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 80px 10%;
+  gap: 60px;
+}
+
+.info-contato {
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.contact {
+  color: var(--primary-color);
+  font-family: 'Lexend Mega', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.frase {
+  color: var(--primary-color);
+  font-family: monospace, sans-serif;
+  font-size: 24px;
+  line-height: 1.4;
+  margin: 0;
+  width: 100%;
+  height: auto;
+}
+
+.lista-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 420px;
+}
+
+.card-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border: 1px solid var(--border-color);
+  background-color: var(--card-bg);
+  padding: 16px 20px;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.card-link:hover {
+  border-color: var(--primary-color);
+  background-color: var(--card-bg);
+}
+
+.conteudo-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  color: #666666;
+  font-family: monospace, sans-serif;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.valor {
+  color: var(--text-color);
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.seta {
+  color: #555555;
+  font-size: 14px;
+}
+
+
+@media (max-width: 768px) {
+  .grid-habilidades {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
